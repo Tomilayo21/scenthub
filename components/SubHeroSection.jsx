@@ -29,6 +29,7 @@ export default function SubHeroSection() {
     const scenesRef = useRef([]);
     const heroImageRef = useRef(null);
     const contentRef = useRef([]);
+    const galleryRef = useRef(null);
 
 
 
@@ -42,13 +43,12 @@ export default function SubHeroSection() {
 
             gsap.set(scenes, {
                 opacity: 0,
-                scale: 0.98
+                scale: 1,
             });
 
 
             gsap.set(scenes[0], {
                 opacity: 1,
-                scale: 1
             });
 
             gsap.set(contentRef.current,{
@@ -78,58 +78,111 @@ export default function SubHeroSection() {
 
 
 
-            scenes.forEach((scene,index)=>{
+            scenes.forEach((scene, index) => {
 
+                if (index === 0) return;
 
-                if(index === 0) return;
+                // FRAME 3 -> FRAME 4
+                if (index === 3) {
 
+                    timeline
 
+                    // Remove Frame 3 text
+                    .to(contentRef.current[2], {
+                        opacity: 0,
+                        y: -80,
+                        duration: 0.35
+                    })
+
+                    // Reveal Frame 4 immediately
+                    .set(scenes[3], {
+                        opacity: 1
+                    })
+
+                    // Zoom OUT the shared image
+                    .fromTo(
+                        heroImageRef.current,
+                        {
+                            scale: 1
+                        },
+                        {
+                            scale: 0.25,
+                            duration: 1.4,
+                            ease: "none"
+                        }
+                    )
+
+                    // Fade the overlay away
+                    .to(
+                        scenes[2],
+                        {
+                            opacity: 0,
+                            duration: 0.4
+                        },
+                        "<0.8"
+                    )
+
+                    // Fade in Frame 4 text
+                    .fromTo(
+                        contentRef.current[3],
+                        {
+                            opacity: 0,
+                            y: 80
+                        },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.6
+                        },
+                        "<0.2"
+                    );
+
+                    return;
+                }
+
+                // NORMAL TRANSITIONS
 
                 timeline
-                .to(
-                    contentRef.current[index-1],
-                    {
-                        opacity:0,
-                        y:-80,
-                        duration:0.5,
-                        ease:"power2.in"
-                    }
-                )
 
+                    .to(contentRef.current[index - 1], {
+                        opacity: 0,
+                        y: -80,
+                        duration: 0.5
+                    })
 
-                .to(
-                    scenes[index-1],
-                    {
-                        opacity:0,
-                        duration:0.3
-                    }
-                )
+                    .to(
+                        scenes[index - 1],
+                        {
+                            opacity: 0,
+                            duration: 0.6,
+                            ease: "none"
+                        },
+                        "<"
+                    )
 
+                    .to(
+                        scenes[index],
+                        {
+                            opacity: 1,
+                            duration: 0.6,
+                            ease: "none"
+                        },
+                        "<"
+                    )
 
-                .to(
-                    scenes[index],
-                    {
-                        opacity:1,
-                        scale:1,
-                        duration:0.4
-                    }
-                )
-
-
-                .fromTo(
-                    contentRef.current[index],
-                    {
-                        opacity:0,
-                        y:80
-                    },
-                    {
-                        opacity:1,
-                        y:0,
-                        duration:0.6,
-                        ease:"power3.out"
-                    }
-                );
-
+                    .fromTo(
+                        contentRef.current[index],
+                        {
+                            opacity: 0,
+                            y: 80
+                        },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.6
+                        },
+                        "<0.15"
+                    );
 
             });
 
@@ -156,7 +209,7 @@ export default function SubHeroSection() {
                 h-screen
                 w-screen
                 overflow-hidden
-                bg-black
+                bg-black/50
             "
         >
 
@@ -420,7 +473,9 @@ export default function SubHeroSection() {
             >
 
 
-                <div className="
+                <div 
+                    ref={galleryRef}
+                    className="
                     relative
                     w-full
                     h-full
