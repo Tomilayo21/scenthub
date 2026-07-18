@@ -1,4 +1,4 @@
-// app/api/user/change-password/route.js (example)
+// app/api/user/change-password/route.js 
 import { NextResponse } from "next/server";
 import connectDB from "@/config/db";
 import User from "@/models/User";

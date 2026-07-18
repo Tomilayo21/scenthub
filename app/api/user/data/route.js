@@ -1,23 +1,42 @@
 import connectDB from "@/config/db";
 import User from "@/models/User";
-import { getAuth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/lib/authOptions";
 
+export async function GET() {
+  try {
+    await connectDB();
 
-export async function GET(request) {
-    try {
-        const { userId } = getAuth(request)
+    const session = await getServerSession(authOptions);
 
-        await connectDB()
-        const user = await User.findById(userId)
+    if (!session?.user?.id) {
+      return NextResponse.json(
+        { success: false, message: "Unauthorized" },
+        { status: 401 }
+      );
+    }
 
-        if (!user) {
-            return NextResponse.json({ success : false, message: "User Not Found" })            
-        }
+    const userId = session.user.id;
 
-        return NextResponse.json({ success:true, user })
-    } catch (error) {
-        return NextResponse.json({ success:false, message: error.message })
-    }    
+    // Fetch user by MongoDB _id
+    const user = await User.findById(userId);
+
+    if (!user) {
+      return NextResponse.json({
+        success: false,
+        message: "User Not Found",
+      });
+    }
+
+    return NextResponse.json({
+      success: true,
+      user,
+    });
+  } catch (error) {
+    return NextResponse.json({
+      success: false,
+      message: error.message,
+    });
+  }
 }
-

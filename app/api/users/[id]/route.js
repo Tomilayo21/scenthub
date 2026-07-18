@@ -9,7 +9,7 @@ export async function PATCH(req, { params }) {
   try {
     await connectDB();
 
-    const { id } = params; // ✅ don't "await" this
+    const { id } = params; 
     const body = await req.json();
     const { role } = body;
 
