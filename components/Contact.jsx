@@ -53,7 +53,7 @@ export default function Contact() {
                                     Email
                                 </p>
                                 <p className="font-medium">
-                                    info@example.com
+                                    info@scenthubrealtyconstruction.com
                                 </p>
                             </div>
                         </div>

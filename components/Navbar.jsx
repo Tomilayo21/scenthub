@@ -86,7 +86,6 @@ const Navbar = () => {
               ["Services", "/services"],
               ["About", "/about"],
               ["Blog", "/blog"],
-              ["Contact", "/contact"],
             ].map(([name, href]) => (
               <Link
                 key={name}
