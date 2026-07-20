@@ -21,11 +21,11 @@ export default function Footer() {
             {/* Main Footer */}
             <div className="px-6 md:px-12 lg:px-24 py-16">
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
 
 
                     {/* Brand */}
-                    <div>
+                    <div className="col-span-2 lg:col-span-1">
 
                         <h2 className="font-medium uppercase text-sm tracking-[3px] text-black">
                             Scenthub Realty
@@ -167,7 +167,7 @@ export default function Footer() {
 
 
                     {/* Contact */}
-                    <div>
+                    <div className="col-span-2 lg:col-span-1">
 
                         <h3 className="text-lg font-medium mb-6">
                             Contact
@@ -207,14 +207,14 @@ export default function Footer() {
 
 
 
-                            <div className="flex gap-3">
+                            <div className="flex gap-3 items-start">
 
                                 <Mail 
                                     size={20}
-                                    className="text-black shrink-0"
+                                    className="text-black shrink-0 mt-1"
                                 />
 
-                                <p>
+                                <p className="break-all">
                                     info@scenthubrealtyconstruction.com
                                 </p>
 
