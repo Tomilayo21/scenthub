@@ -108,7 +108,14 @@ export default function Count() {
   return (
     <section
       ref={sectionRef}
-      className="bg-stone-50 py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-black"
+      className="
+        bg-black
+        py-24
+        md:py-32
+        px-6
+        md:px-12
+        lg:px-24
+      "
     >
 
       {/* Heading */}
