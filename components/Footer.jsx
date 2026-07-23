@@ -16,7 +16,7 @@ import {
 export default function Footer() {
 
     return (
-        <footer className="text-black">
+        <footer className="text-black bg-gray-50">
 
             {/* Main Footer */}
             <div className="px-6 md:px-12 lg:px-24 py-16">
@@ -89,7 +89,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-gray-500">
 
                             <li>
-                                <a href="#" className="hover:text-gray-400 transition">
+                                <a href="/company/about" className="hover:text-gray-400 transition">
                                     About Us
                                 </a>
                             </li>
@@ -101,7 +101,7 @@ export default function Footer() {
                             </li>
 
                             <li>
-                                <a href="#" className="hover:text-gray-400 transition">
+                                <a href="/company/services" className="hover:text-gray-400 transition">
                                     Services
                                 </a>
                             </li>
@@ -113,7 +113,7 @@ export default function Footer() {
                             </li>
 
                             <li>
-                                <a href="#" className="hover:text-gray-400 transition">
+                                <a href="/contact" className="hover:text-gray-400 transition">
                                     Contact
                                 </a>
                             </li>
@@ -185,7 +185,7 @@ export default function Footer() {
                                 />
 
                                 <p>
-                                    Lagos, Nigeria
+                                    52, Old Otta Road, Ile Epo, Oke Odo, Lagos, Nigeria
                                 </p>
 
                             </div>
@@ -200,7 +200,7 @@ export default function Footer() {
                                 />
 
                                 <p>
-                                    +234 800 000 0000
+                                    +234 817 865 7674
                                 </p>
 
                             </div>
@@ -224,13 +224,13 @@ export default function Footer() {
                         </div>
 
 
-                        <a
+                        {/* <a
                             href="#"
                             className="inline-flex items-center gap-2 mt-8 border border-black px-5 py-3 rounded-full hover:bg-gray-800 hover:text-black transition"
                         >
                             Get A Quote
                             <ArrowUpRight size={17}/>
-                        </a>
+                        </a> */}
 
 
                     </div>

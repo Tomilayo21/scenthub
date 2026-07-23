@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Count from "@/components/Count";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -189,48 +190,53 @@ export default function AboutSection() {
 
         {/* PART 2 */}
         <div className="px-6 md:px-12 lg:px-24 py-16 bg-black">
-        <div className="grid grid-cols-1 lg:grid-cols-[0.5fr_1.5fr] gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.5fr_1.5fr] gap-6">
 
-            {/* Left */}
-            <div className="career-left">
-            <p className="uppercase tracking-widest text-sm text-white mb-6">
-                Careers
-            </p>
+                {/* Left */}
+                <div className="career-left">
+                <p className="uppercase tracking-widest text-sm text-white mb-6">
+                    Services
+                </p>
 
-            <h2 className="text-3xl md:text-5xl font-semibold leading-[1.05] text-gray-200">
-                Become an
-                <br />
-                employee
-                <br />
-                owner.
-            </h2>
+                <h2 className="text-3xl md:text-5xl font-semibold leading-[1.05] text-gray-200">
+                    Building
+                    <br />
+                    solutions for
+                    <br />
+                    every project.
+                </h2>
+                </div>
+
+                {/* Right */}
+                <div className="career-right flex flex-col justify-center max-w-3xl lg:ml-auto">
+
+                <p className="text-lg leading-relaxed text-gray-300">
+                    We provide end-to-end construction and engineering services, including
+                    <span className="text-white"> Building Construction</span>,
+                    <span className="text-white"> Civil Engineering Works</span>,
+                    <span className="text-white"> Real Estate Development</span>,
+                    <span className="text-white"> Project Management</span>,
+                    <span className="text-white"> Bills of Quantities (BOQ)</span>,
+                    <span className="text-white"> Material & Labour Scheduling</span>, and
+                    <span className="text-white"> Valuation Analysis</span>, delivering
+                    quality solutions with professionalism, precision, and lasting value.
+                </p>
+
+                <Link
+                    href="/services"
+                    className="group mt-10 inline-flex self-start items-center gap-3 rounded-full border-2 border-red-600 px-8 py-4 text-white transition-all duration-300 hover:bg-red-600"
+                >
+                    <span>Explore Our Services</span>
+
+                    <ArrowRight
+                    size={18}
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                </Link>
+
+                </div>
             </div>
-
-
-            {/* Right */}
-            <div className="career-right flex flex-col justify-center max-w-3xl lg:ml-auto">
-            <p className="text-lg leading-relaxed text-gray-300">
-                At Scenthub Realty & Construction Limited, we believe our people are
-                the foundation of every successful project. We foster a collaborative
-                environment where talent is nurtured, innovation is encouraged, and
-                every team member is empowered to grow professionally while delivering
-                excellence to our clients.
-            </p>
-
-            <Link
-                href="/careers"
-                className="group mt-10 inline-flex self-start items-center gap-3 rounded-full border-2 border-red-600 px-8 py-4 text-white transition-all duration-300 hover:bg-red-600"
-            >
-                <span>Apply Now</span>
-
-                <ArrowRight
-                size={18}
-                className="transition-transform duration-300 group-hover:translate-x-1"
-                />
-            </Link>
-            </div>
-
-        </div>
+            {/* <Count /> */}
         </div>
 
 
