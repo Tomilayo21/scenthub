@@ -32,7 +32,7 @@ export default function Footer() {
             <footer className="bg-gray-50 text-black relative">
 
                 {/* Main Footer */}
-                <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-6 md:py-6">
+                <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-4 md:py-6">
                     {/* ================= MOBILE ================= */}
                     <div className="lg:hidden">
 
