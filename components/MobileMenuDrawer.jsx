@@ -5,12 +5,25 @@ import Link from "next/link";
 import { X, Home, Building2, BadgeHelp, Info, Phone, Newspaper, Heart, GitCompare, Folder, Shield } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { useEffect } from "react";
 // import AvatarMenu from "./AvatarMenu";
 
 export default function MobileMenuDrawer({ isOpen, onClose }) {
   const router = useRouter();
   const { data: session } = useSession();
   const user = session?.user;
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   return (
     <AnimatePresence>
@@ -61,7 +74,7 @@ export default function MobileMenuDrawer({ isOpen, onClose }) {
               <div>
 
                   <p className="text-white/50 uppercase tracking-[4px] text-xs">
-                      Navigation
+                    Navigations
                   </p>
 
                   {user && (
