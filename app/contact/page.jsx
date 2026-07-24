@@ -9,7 +9,7 @@ export default function Contact() {
         <>
             <Navbar />
 
-            <main className="bg-white text-black pt-24">
+            <main className="bg-white text-black pt-16">
 
 
                 {/* CONTACT AREA */}
@@ -18,7 +18,6 @@ export default function Contact() {
                     md:px-12
                     py-24
                     mt-8
-                    md:mt-8
                     md:py-36
                 ">
 
@@ -73,7 +72,7 @@ export default function Contact() {
                                     title: "Office",
                                     value: (
                                         <>
-                                            52 Old Otta Road, Ile Epo,
+                                            52, Old Otta Road, Ile Epo,
                                             <br />
                                             Oke Odo, Lagos, Nigeria
                                         </>
