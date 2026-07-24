@@ -17,7 +17,7 @@ export default function Contact() {
                     px-6
                     md:px-12
                     py-24
-                    mt-16
+                    mt-8
                     md:mt-8
                     md:py-36
                 ">
@@ -36,7 +36,7 @@ export default function Contact() {
 
 
                     {/* LEFT */}
-                    <div className="max-w-xl">
+                    <div className="max-w-xl mb-16">
 
                         <h2 className="
                             text-4xl
@@ -186,7 +186,7 @@ export default function Contact() {
                                     text-lg
                                     leading-8
                                     max-w-md
-                                    mb-14
+                                    mb-8
                                 ">
                                     Complete the form below and our team will
                                     get back to you within one business day.
@@ -204,7 +204,7 @@ export default function Contact() {
                                     gap-y-10
                                 ">
 
-                                    <div>
+                                    <div className="mb-8">
 
                                         <label className="
                                             block
@@ -234,7 +234,7 @@ export default function Contact() {
                                     </div>
 
 
-                                    <div>
+                                    <div className="mb-8">
 
                                         <label className="
                                             block
@@ -266,7 +266,7 @@ export default function Contact() {
                                 </div>
 
 
-                                <div>
+                                <div className="mb-8">
 
                                     <label className="
                                         block
@@ -369,39 +369,38 @@ export default function Contact() {
                     pb-32
                 ">
 
-
                     <div className="
                         max-w-7xl
                         mx-auto
                         h-[450px]
-                        bg-gray-100
+                        rounded-sm
+                        overflow-hidden
                         border
                         border-gray-200
-                        flex
-                        items-center
-                        justify-center
                     ">
 
-                        <p className="
-                            uppercase
-                            tracking-[0.3em]
-                            text-sm
-                            text-gray-500
-                        ">
-                            Google Map Location
-                        </p>
-
+                        <iframe
+                            src="https://www.google.com/maps?q=52%20Old%20Otta%20Road,%20Ile%20Epo,%20Oke%20Odo,%20Lagos,%20Nigeria&output=embed"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            loading="lazy"
+                            allowFullScreen
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Scenthub Realty Construction Location"
+                        />
 
                     </div>
-
 
                 </section>
 
 
             </main>
 
-
-            <Footer />
+            <div className="mt-16">
+                <Footer />
+            </div>
+            
 
         </>
     );
