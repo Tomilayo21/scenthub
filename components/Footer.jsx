@@ -351,11 +351,11 @@ export default function Footer() {
                                 {[
                                     {
                                         icon: FaFacebookF,
-                                        link: "https://facebook.com/yourpage",
+                                        link: "https://facebook.com/senthubrealtycontructionltd",
                                     },
                                     {
                                         icon: FaInstagram,
-                                        link: "https://instagram.com/yourpage",
+                                        link: "https://instagram.com/senthubrealtycontructionltd",
                                     },
                                     {
                                         icon: FaLinkedinIn,
@@ -367,7 +367,7 @@ export default function Footer() {
                                     },
                                     {
                                         icon: FaWhatsapp,
-                                        link: `https://wa.me/2348178657674?text=${encodeURIComponent(
+                                        link: `https://wa.me/2347068978759?text=${encodeURIComponent(
                                             "Hi, I'm reaching out to learn more about your projects and services."
                                         )}`
                                     },
