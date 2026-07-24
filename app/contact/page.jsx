@@ -139,6 +139,7 @@ export default function Contact() {
                                             leading-snug
                                             text-black
                                             max-w-md
+                                            break-all
                                         ">
                                             {item.value}
                                         </p>
