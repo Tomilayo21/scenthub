@@ -9,7 +9,7 @@ export default function Contact() {
         <>
             <Navbar />
 
-            <main className="bg-white text-black pt-16">
+            <main className="bg-white text-black pt-8">
 
 
                 {/* CONTACT AREA */}
