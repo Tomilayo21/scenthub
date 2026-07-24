@@ -81,7 +81,7 @@ export default function Contact() {
                                 },
                                 {
                                     title: "Phone",
-                                    value: "+234 817 865 7674"
+                                    value: "+234 817 865 7674, +234 706 897 8759"
                                 },
                                 {
                                     title: "Email",
@@ -139,7 +139,7 @@ export default function Contact() {
                                             leading-snug
                                             text-black
                                             max-w-md
-                                            break-all
+                                            break-words
                                         ">
                                             {item.value}
                                         </p>
