@@ -435,34 +435,30 @@ return (
                 <section className="bg-black text-white px-6 md:px-12 lg:px-24 py-24">
 
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
 
 
-                {
-                stats.map(stat=>(
+                        {
+                            stats.map(stat=>(
+                                <div key={stat.label}>
 
 
-                <div key={stat.label}>
+                                    <h3 className="text-5xl font-semibold">
+                                        {stat.value}
+                                    </h3>
 
 
-                <h3 className="text-5xl font-bold">
-                {stat.value}
-                </h3>
+                                    <p className="text-gray-400 mt-3">
+                                        {stat.label}
+                                    </p>
 
 
-                <p className="text-gray-400 mt-3">
-                {stat.label}
-                </p>
+                                </div>
+                            ))
+                        }
 
 
-                </div>
-
-
-                ))
-                }
-
-
-                </div>
+                    </div>
 
 
                 </section>
@@ -556,7 +552,7 @@ return (
                                 sm:text-3xl
                                 md:text-3xl
                                 lg:text-3xl
-                                font-bold
+                                font-semibold
                                 leading-[1.05]
                                 text-black
                                 mb-4
@@ -615,7 +611,7 @@ return (
                                                 text-xl
                                                 sm:text-2xl
                                                 md:text-3xl
-                                                font-semibold
+                                                font-normal
                                                 text-black
                                                 leading-tight
                                             ">
@@ -802,7 +798,7 @@ return (
                                 mt-6
                                 md:mt-8
                                 max-w-2xl
-                                text-norms
+                                text-white/70
                                 text-base
                                 md:text-lg
                                 leading-8

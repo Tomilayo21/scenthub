@@ -335,7 +335,7 @@ export default function Footer() {
                                 </a>
 
                                 <a
-                                    href="#"
+                                    href="/terms-and-conditions"
                                     className="text-gray-500 hover:text-black transition-colors"
                                 >
                                     Terms & Conditions
