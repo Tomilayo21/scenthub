@@ -24,6 +24,7 @@ export default function BackToTop() {
                 hover:text-white
                 transition-all
                 duration-300
+                cursor-pointer
             "
         >
             ↑

@@ -79,6 +79,15 @@ export default function Footer() {
 
                                     <li>
                                         <a
+                                            href="/company/services"
+                                            className="hover:text-black transition-colors"
+                                        >
+                                            Services
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
                                             href="/projects"
                                             className="hover:text-black transition-colors"
                                         >
@@ -197,6 +206,15 @@ export default function Footer() {
                                             className="hover:text-black transition-colors"
                                         >
                                             About Us
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="/company/services"
+                                            className="hover:text-black transition-colors"
+                                        >
+                                            Services
                                         </a>
                                     </li>
 
@@ -328,7 +346,7 @@ export default function Footer() {
                             <div className="flex items-center gap-6 text-sm">
 
                                 <a
-                                    href="#"
+                                    href="/privacy-policy"
                                     className="text-gray-500 hover:text-black transition-colors"
                                 >
                                     Privacy Policy

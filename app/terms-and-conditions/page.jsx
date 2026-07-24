@@ -8,14 +8,14 @@ export default function TermsAndConditions() {
         <>
             <Navbar />
 
-            <main className="pt-32 pb-24 bg-white">
-                <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <main className="pt-32 pb-24 bg-white mt-16">
+                <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 py-4 md:py-6">
 
                     {/* Header */}
                     <div className="mb-20 text-center">
-                        <p className="uppercase tracking-[4px] text-sm text-[var(--norms)] font-semibold">
+                        {/* <p className="uppercase tracking-[4px] text-sm text-[var(--norms)] font-semibold">
                             Legal
-                        </p>
+                        </p> */}
 
                         <h1 className="mt-4 text-4xl md:text-6xl font-bold text-gray-900">
                             Terms & Conditions
@@ -29,10 +29,10 @@ export default function TermsAndConditions() {
                         </p>
                     </div>
 
-                    <div className="space-y-16 text-gray-700 leading-8">
+                    <div className="space-y-16 text-gray-700 leading-8 mt-4">
 
                         {/* 1 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 1. Acceptance of Terms
                             </h2>
@@ -46,7 +46,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 2 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 2. Our Services
                             </h2>
@@ -63,7 +63,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 3 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 3. Quotations & Contracts
                             </h2>
@@ -77,7 +77,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 4 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 4. Intellectual Property
                             </h2>
@@ -93,7 +93,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 5 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 5. User Responsibilities
                             </h2>
@@ -107,7 +107,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 6 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 6. Project Timelines
                             </h2>
@@ -124,7 +124,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 7 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 7. Payments
                             </h2>
@@ -139,7 +139,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 8 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 8. Limitation of Liability
                             </h2>
@@ -155,7 +155,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 9 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 9. Third-Party Links
                             </h2>
@@ -169,7 +169,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 10 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 10. Privacy
                             </h2>
@@ -183,7 +183,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 11 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 11. Governing Law
                             </h2>
@@ -198,7 +198,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* 12 */}
-                        <section>
+                        <section className="mb-4">
                             <h2 className="text-2xl font-semibold mb-4">
                                 12. Changes to These Terms
                             </h2>
@@ -213,7 +213,7 @@ export default function TermsAndConditions() {
                         </section>
 
                         {/* Contact */}
-                        <section className="bg-gray-100 rounded-3xl p-10 mt-20">
+                        <section className="p-10 mt-16 mb-16">
                             <h2 className="text-2xl font-semibold mb-4">
                                 Contact Us
                             </h2>

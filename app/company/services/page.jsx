@@ -96,7 +96,7 @@ const projects=[
 
 const stats=[
     {
-        value:"150+",
+        value:"50+",
         label:"Projects Delivered"
     },
 
@@ -106,13 +106,13 @@ const stats=[
     },
 
     {
-        value:"75+",
-        label:"Satisfied Clients"
+        value:"96%",
+        label:"Clients Satisfaction"
     },
 
     {
-        value:"30+",
-        label:"Industry Professionals"
+        value:"25+",
+        label:"Professional Team"
     }
 ];
 
