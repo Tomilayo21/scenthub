@@ -1,3 +1,5 @@
+"use client";
+import BackToTop from "@/components/BackToTop";
 import {
     Mail,
     Phone,
@@ -9,266 +11,405 @@ import {
     FaFacebookF,
     FaInstagram,
     FaLinkedinIn,
-    FaTwitter
+    FaTwitter,
+    FaWhatsapp,
 } from "react-icons/fa";
+
+console.log(BackToTop);
 
 
 export default function Footer() {
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
     return (
-        <footer className="text-black bg-gray-50">
+        <>
+            <footer className="bg-gray-50 text-black relative">
 
-            {/* Main Footer */}
-            <div className="px-6 md:px-12 lg:px-24 py-16">
+                {/* Main Footer */}
+                <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16">
 
-                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+                    {/* ================= MOBILE ================= */}
+                    <div className="lg:hidden">
 
+                        {/* Brand */}
+                        <div className="text-center max-w-md mx-auto">
 
-                    {/* Brand */}
-                    <div className="col-span-2 lg:col-span-1">
+                            <h2 className="uppercase tracking-[4px] text-sm font-semibold">
+                                Scenthub Realty
+                            </h2>
 
-                        <h2 className="font-medium uppercase text-sm tracking-[3px] text-black">
-                            Scenthub Realty
-                        </h2>
+                            <p className="uppercase tracking-[3px] text-xs text-gray-500 mt-2">
+                                & Construction Limited
+                            </p>
 
-                        <p className="text-xs uppercase tracking-wide text-gray-500 mt-1">
-                            & Construction Limited
-                        </p>
-
-
-                        <p className="text-gray-500 leading-relaxed max-w-sm mt-5">
-                            We deliver innovative real estate and construction solutions with
-                            exceptional craftsmanship, quality, and attention to detail.
-                            Building spaces that stand the test of time.
-                        </p>
-
-
-                        <div className="flex gap-4 mt-7">
-
-                            <a 
-                                href="#"
-                                className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition"
-                            >
-                                <FaFacebookF size={18}/>
-                            </a>
-
-                            <a 
-                                href="#"
-                                className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition"
-                            >
-                                <FaInstagram size={18}/>
-                            </a>
-
-                            <a 
-                                href="#"
-                                className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition"
-                            >
-                                <FaLinkedinIn size={18}/>
-                            </a>
-
-                            <a 
-                                href="#"
-                                className="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition"
-                            >
-                                <FaTwitter size={18}/>
-                            </a>
+                            <p className="mt-8 text-gray-600 leading-8">
+                                We deliver innovative real estate and construction
+                                solutions with exceptional craftsmanship, quality,
+                                and attention to detail—building spaces designed
+                                to stand the test of time.
+                            </p>
 
                         </div>
 
-                    </div>
+                        {/* Company + Contact */}
+                        <div className="grid grid-cols-2 gap-6 mt-16">
+
+                            {/* Company */}
+                            <div className="justify-self-end pr-8">
+
+                                <h3 className="uppercase tracking-[3px] text-sm font-semibold mb-8">
+                                    Company
+                                </h3>
+
+                                <ul className="space-y-5 text-gray-600">
+
+                                    <li>
+                                        <a
+                                            href="/company/about"
+                                            className="hover:text-black transition-colors"
+                                        >
+                                            About Us
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="/projects"
+                                            className="hover:text-black transition-colors"
+                                        >
+                                            Projects
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="#"
+                                            className="hover:text-black transition-colors"
+                                        >
+                                            Careers
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="/contact"
+                                            className="hover:text-black transition-colors"
+                                        >
+                                            Contact
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
 
 
+                            {/* Contact */}
+                            <div>
 
-                    {/* Navigation */}
-                    <div>
-
-                        <h3 className="text-lg font-medium mb-6">
-                            Company
-                        </h3>
-
-                        <ul className="space-y-4 text-gray-500">
-
-                            <li>
-                                <a href="/company/about" className="hover:text-gray-400 transition">
-                                    About Us
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" className="hover:text-gray-400 transition">
-                                    Our Projects
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="/company/services" className="hover:text-gray-400 transition">
-                                    Services
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" className="hover:text-gray-400 transition">
-                                    Careers
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="/contact" className="hover:text-gray-400 transition">
+                                <h3 className="uppercase tracking-[3px] text-sm font-semibold mb-8">
                                     Contact
-                                </a>
-                            </li>
+                                </h3>
 
-                        </ul>
+                                <div className="space-y-6 text-gray-600">
 
+                                    <div className="flex items-start gap-4">
+                                        {/* <MapPin size={18} className="mt-1 shrink-0" /> */}
+
+                                        <p className="leading-7">
+                                            52, Old Otta Road,<br />
+                                            Ile Epo, Oke Odo,<br />
+                                            Lagos, Nigeria
+                                        </p>
+                                    </div>
+
+
+                                    <div className="flex items-center gap-4">
+                                        {/* <Phone size={18} /> */}
+                                        <div className="flex flex-col gap-2">
+                                            {/* <Phone size={18} /> */}
+                                            <p>+234 817 865 7674,</p>
+                                            <p>+234 706 897 8759</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div className="flex items-start gap-4">
+                                        {/* <Mail size={18} className="mt-1 shrink-0" /> */}
+                                        <p className="break-all">
+                                            info@scenthubrealtyconstruction.com
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
 
+                    {/* ================= DESKTOP ================= */}
+                    <div className="hidden lg:block">
+
+                        <div className="grid grid-cols-3 gap-16 lg:gap-20">
 
 
+                            {/* Brand */}
+                            <div className="text-center lg:text-left">
 
-                    {/* Services */}
-                    <div>
+                                <h2 className="uppercase tracking-[4px] text-sm font-semibold">
+                                    Scenthub Realty
+                                </h2>
 
-                        <h3 className="text-lg font-medium mb-6">
-                            Services
-                        </h3>
+                                <p className="uppercase tracking-[3px] text-xs text-gray-500 mt-2">
+                                    & Construction Limited
+                                </p>
 
-
-                        <ul className="space-y-4 text-gray-500">
-
-                            <li>
-                                <a href="#" className="hover:text-gray-400 transition">
-                                    Construction
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" className="hover:text-gray-400 transition">
-                                    Renovation
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" className="hover:text-gray-400 transition">
-                                    Architecture
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" className="hover:text-gray-400 transition">
-                                    Project Management
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-
-
-                    {/* Contact */}
-                    <div className="col-span-2 lg:col-span-1">
-
-                        <h3 className="text-lg font-medium mb-6">
-                            Contact
-                        </h3>
-
-
-                        <div className="space-y-5 text-gray-500">
-
-
-                            <div className="flex gap-3">
-
-                                <MapPin 
-                                    size={20}
-                                    className="text-black shrink-0"
-                                />
-
-                                <p>
-                                    52, Old Otta Road, Ile Epo, Oke Odo, Lagos, Nigeria
+                                <p className="mt-8 text-gray-600 leading-8 max-w-md">
+                                    We deliver innovative real estate and construction
+                                    solutions with exceptional craftsmanship, quality,
+                                    and attention to detail—building spaces designed
+                                    to stand the test of time.
                                 </p>
 
                             </div>
 
 
 
-                            <div className="flex gap-3">
+                            {/* Company */}
 
-                                <Phone 
-                                    size={20}
-                                    className="text-black shrink-0"
-                                />
+                            <div className="text-center">
 
-                                <p>
-                                    +234 817 865 7674
-                                </p>
+                                <h3 className="uppercase tracking-[3px] text-sm font-semibold mb-8">
+                                    Company
+                                </h3>
+
+                                <ul className="space-y-5 text-gray-600">
+
+                                    <li>
+                                        <a
+                                            href="/company/about"
+                                            className="hover:text-black transition-colors"
+                                        >
+                                            About Us
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="/properties"
+                                            className="hover:text-black transition-colors"
+                                        >
+                                            Projects
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="#"
+                                            className="hover:text-black transition-colors"
+                                        >
+                                            Careers
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="/contact"
+                                            className="hover:text-black transition-colors"
+                                        >
+                                            Contact
+                                        </a>
+                                    </li>
+
+                                </ul>
 
                             </div>
 
 
 
-                            <div className="flex gap-3 items-start">
+                            {/* Contact */}
 
-                                <Mail 
-                                    size={20}
-                                    className="text-black shrink-0 mt-1"
-                                />
+                            <div>
 
-                                <p className="break-all">
-                                    info@scenthubrealtyconstruction.com
-                                </p>
+                                <h3 className="uppercase tracking-[3px] text-sm font-semibold mb-8">
+                                    Contact
+                                </h3>
+
+                                <div className="space-y-6 text-gray-600">
+
+                                    <div className="flex items-start gap-4">
+
+                                        {/* <MapPin
+                                            size={18}
+                                            className="mt-1 shrink-0"
+                                        /> */}
+
+                                        <p className="leading-7">
+                                            52, Old Otta Road,
+                                            Ile Epo, Oke Odo,
+                                            Lagos, Nigeria
+                                        </p>
+
+                                    </div>
+
+
+                                    <div className="flex items-center gap-4">
+
+                                        {/* <Phone
+                                            size={18}
+                                            className="shrink-0"
+                                        /> */}
+
+                                        <p className="break-all">
+                                            +234 817 865 7674, +234 706 897 8759
+                                        </p>
+
+                                    </div>
+
+
+                                    <div className="flex items-start gap-4">
+
+                                        {/* <Mail
+                                            size={18}
+                                            className="mt-1 shrink-0"
+                                        /> */}
+
+                                        <p className="break-all">
+                                            info@scenthubrealtyconstruction.com
+                                        </p>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
 
                         </div>
 
-
-                        {/* <a
-                            href="#"
-                            className="inline-flex items-center gap-2 mt-8 border border-black px-5 py-3 rounded-full hover:bg-gray-800 hover:text-black transition"
-                        >
-                            Get A Quote
-                            <ArrowUpRight size={17}/>
-                        </a> */}
-
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-
-
-            {/* Bottom Bar */}
-            <div className="border-t border-gray-800 px-6 md:px-12 lg:px-24 py-6">
-
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-
-                    <p>
-                        © {new Date().getFullYear()} Scenthub Realty & Construction Ltd. All rights reserved.
-                    </p>
-
-
-                    <div className="flex gap-6">
-
-                        <a href="#" className="hover:text-gray-400 transition">
-                            Privacy Policy
-                        </a>
-
-                        <a href="#" className="hover:text-gray-400 transition">
-                            Terms & Conditions
-                        </a>
-
                     </div>
 
                 </div>
 
-            </div>
 
 
-        </footer>
+                {/* Bottom */}
+                <div className="border-t border-gray-200">
+
+                    <div className="
+                        max-w-7xl
+                        mx-auto
+                        px-6
+                        md:px-12
+                        lg:px-16
+                        py-6
+                        flex
+                        items-center
+                        justify-between
+                    ">
+
+                        {/* Center Content */}
+                        <div className="flex-1 flex flex-col items-center gap-5">
+
+                            {/* Copyright */}
+                            <p className="text-sm text-gray-500 text-center">
+                                © {new Date().getFullYear()} Scenthub Realty &
+                                Construction Ltd. All rights reserved.
+                            </p>
+
+
+                            {/* Privacy + Terms */}
+                            <div className="flex items-center gap-6 text-sm">
+
+                                <a
+                                    href="#"
+                                    className="text-gray-500 hover:text-black transition-colors"
+                                >
+                                    Privacy Policy
+                                </a>
+
+                                <a
+                                    href="#"
+                                    className="text-gray-500 hover:text-black transition-colors"
+                                >
+                                    Terms & Conditions
+                                </a>
+
+                            </div>
+
+
+                            {/* Social Icons */}
+                            <div className="flex items-center gap-3">
+
+                                {[
+                                    {
+                                        icon: FaFacebookF,
+                                        link: "https://facebook.com/yourpage",
+                                    },
+                                    {
+                                        icon: FaInstagram,
+                                        link: "https://instagram.com/yourpage",
+                                    },
+                                    {
+                                        icon: FaLinkedinIn,
+                                        link: "https://linkedin.com/company/yourcompany",
+                                    },
+                                    {
+                                        icon: FaTwitter,
+                                        link: "https://twitter.com/yourpage",
+                                    },
+                                    {
+                                        icon: FaWhatsapp,
+                                        link: "https://wa.me/2348100515622",
+                                    },
+                                ].map(({ icon: Icon, link }, index) => (
+
+                                    <a
+                                        key={index}
+                                        href={link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="
+                                            w-10
+                                            h-10
+                                            rounded-full
+                                            border
+                                            border-gray-300
+                                            flex
+                                            items-center
+                                            justify-center
+                                            hover:bg-black
+                                            hover:text-white
+                                            hover:border-black
+                                            transition-all
+                                            duration-300
+                                        "
+                                    >
+                                        <Icon size={16} />
+                                    </a>
+
+                                ))}
+
+                            </div>
+
+                        </div>
+
+
+                        {/* Back To Top Right */}
+                        <BackToTop />
+
+                    </div>
+
+                </div>
+
+            </footer>
+        </>
     );
 }

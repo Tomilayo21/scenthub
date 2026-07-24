@@ -58,9 +58,9 @@ const Navbar = () => {
             className="flex items-center gap-3 cursor-pointer"
           >
             <img
-              src="/default-logo.png"
+              src="/logo/1001366707-removebg-preview.png"
               alt="logo"
-              className="h-12 w-auto"
+              className="h-10 w-auto"
             />
 
             <div>

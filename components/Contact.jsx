@@ -35,7 +35,7 @@ export default function Contact() {
           </p>
 
           {/* Contact Details */}
-          <div className="mt-10 space-y-6">
+          {/* <div className="mt-10 space-y-6">
 
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center">
@@ -45,7 +45,7 @@ export default function Contact() {
               <div>
                 <p className="text-sm text-gray-500">Phone</p>
                 <p className="text-white font-medium">
-                  +234 817 865 7674
+                  +234 817 865 7674, +234 706 897 8759
                 </p>
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function Contact() {
               </div>
             </div>
 
-          </div>
+          </div> */}
 
           {/* CTA */}
           <div className="mt-10 flex flex-wrap gap-4">

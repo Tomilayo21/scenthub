@@ -28,120 +28,152 @@ export default function MobileMenuDrawer({ isOpen, onClose }) {
 
           {/* SLIDE-IN DRAWER */}
           <motion.div
-            initial={{ x: 300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 300, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 280, damping: 28 }}
-            className="fixed top-0 right-0 w-80 h-full shadow-2xl z-[1000] flex flex-col bg-black overflow-y-auto lg:hidden"
-            >
+            initial={{
+              opacity: 0,
+              scale: 1.05,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+            }}
+            exit={{
+              opacity: 0,
+              scale: 0.98,
+            }}
+            transition={{
+              duration: 0.35,
+              ease: "easeInOut",
+            }}
+            className="
+            fixed
+            inset-0
+            z-[1000]
+            bg-black
+            flex
+            flex-col
+            lg:hidden
+            "
+          >
 
             {/* HEADER */}
-            <div className="relative w-full">
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-[3px]" />
+            <div className="flex items-center justify-between px-8 pt-8">
 
-            {/* CLOSE BUTTON */}
-            <button
-                onClick={onClose}
-                className="absolute right-4 top-4 p-2 bg-white/20 hover:bg-white/30 rounded-full backdrop-blur-md"
-            >
-                <X size={22} className="text-white" />
-            </button>
+              <div>
 
-            {/* WELCOME TEXT ONLY IF USER EXISTS */}
-            {user && (
-                <div className="absolute bottom-4 left-4 text-white font-bold text-xl drop-shadow-lg">
-                Welcome, {user.name.split(" ")[0]}
-                </div>
-            )}
-            </div>
+                  <p className="text-white/50 uppercase tracking-[4px] text-xs">
+                      Navigation
+                  </p>
+
+                  {user && (
+                      <h3 className="text-white text-2xl font-bold mt-2">
+                          Hello, {user.name.split(" ")[0]}
+                      </h3>
+                  )}
+
+              </div>
+
+              <button
+                  onClick={onClose}
+                  className="
+                  w-12
+                  h-12
+                  rounded-full
+                  bg-white/10
+                  hover:bg-white/20
+                  flex
+                  items-center
+                  justify-center
+                  transition
+                  mt-4
+                  "
+              >
+                  <X className="text-white" />
+              </button>
+
+          </div>
 
 
             {/* PROFILE */}
             {user && (
-              <div className="px-6 py-6 border-b border-gray-200 dark:border-gray-700 flex items-center gap-4">
+              <div className="px-6 py-6 border-b border-gray-50 flex items-center gap-4">
                 {/* <AvatarMenu    /> */}
                 <div className="flex flex-col">
-                  <span className="text-lg font-semibold text-gray-900 dark:text-white">{user.name}</span>
-                  <span className="text-sm text-gray-500 dark:text-gray-400 truncate max-w-[180px]">{user.email}</span>
+                  <span className="text-lg font-semibold text-gray-200">{user.name}</span>
+                  <span className="text-sm text-gray-500 truncate max-w-[180px]">{user.email}</span>
                   
                 </div>
               </div>
             )}
 
-            {/* MENU ITEMS */}
-            <div className="flex flex-col px-6 py-4 text-gray-800 dark:text-gray-200 text-base font-medium gap-2">
-              <Link href="/" onClick={onClose} className="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 hover:text-blue-600 transition">
-                <Home size={20} /> Home
-              </Link>
+            <div className="flex-1 flex items-center justify-center">
 
-              <Link href="/properties" onClick={onClose} className="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 hover:text-blue-600 transition">
-                <Building2 size={20} /> Properties
-              </Link>
+              <div className="flex flex-col items-center space-y-6 text-white text-3xl font-normal">
 
-              <button
-                onClick={() => {
-                  if (window.location.pathname === "/") {
-                    document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
-                  } else {
-                    router.push("/#services");
-                  }
-                  onClose();
-                }}
-                className="flex items-center gap-3 py-3 text-left border-b border-gray-200 dark:border-gray-800 hover:text-blue-600 transition"
-              >
-                <BadgeHelp size={20} /> Services
-              </button>
+                <Link
+                  href="/"
+                  onClick={onClose}
+                  className="flex justify-center hover:text-norms transition-colors"
+                >
+                  Home
+                </Link>
 
-              <Link href="/about" onClick={onClose} className="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 hover:text-blue-600 transition">
-                <Info size={20} /> About Us
-              </Link>
+                <Link
+                  href="/properties"
+                  onClick={onClose}
+                  className="flex justify-center hover:text-norms transition-colors"
+                >
+                  Projects
+                </Link>
 
-              <Link href="/contact" onClick={onClose} className="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 hover:text-blue-600 transition">
-                <Phone size={20} /> Contact
-              </Link>
+                <Link
+                  href="/company/services"
+                  onClick={onClose}
+                  className="flex justify-center hover:text-norms transition-colors"
+                >
+                  Services
+                </Link>
 
-              <Link href="/blog" onClick={onClose} className="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 hover:text-blue-600 transition">
-                <Newspaper size={20} /> Blog
-              </Link>
+                <Link
+                  href="/company/about"
+                  onClick={onClose}
+                  className="flex justify-center hover:text-norms transition-colors"
+                >
+                  About Us
+                </Link>
 
-              {user && user.role === "admin" && (
-                <>
+                <Link
+                  href="/contact"
+                  onClick={onClose}
+                  className="flex justify-center hover:text-norms transition-colors"
+                >
+                  Contact
+                </Link>
 
-                  <div className="pt-4 pb-1 text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">My Activity</div>
+                <Link
+                  href="/blog"
+                  onClick={onClose}
+                  className="flex justify-center hover:text-norms transition-colors"
+                >
+                  Blog
+                </Link>
 
-                  {/* <Link href="/saved" onClick={onClose} className="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 hover:text-blue-500">
-                    <Heart size={20} /> Saved Properties
-                  </Link>
+                {user && user.role === "admin" && (
+                  <>
 
-                  <Link href="/compare" onClick={onClose} className="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 hover:text-blue-500">
-                    <GitCompare size={20} /> Compare
-                  </Link>
-
-                  <Link href="/my-listings" onClick={onClose} className="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 hover:text-blue-500">
-                    <Folder size={20} /> My Listings
-                  </Link> */}
-
+                    <div className="pt-4 pb-1 text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">My Activity</div>
                   
-                    <Link href="/admin" onClick={onClose} className="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 text-blue-600 font-semibold">
-                      <Shield size={20} /> Admin Dashboard
+                    <Link href="/admin" onClick={onClose} className="flex justify-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 hover:text-norms font-normal">
+                      Admin Dashboard
                     </Link>
-                </>
 
-              )}
+                  </>
+
+                )}
+
+              </div>
+
             </div>
 
-            {/* CTA BUTTON */}
-            <div className="mt-auto px-6 py-6">
-              <button
-                onClick={() => {
-                  onClose();
-                  router.push("/contact");
-                }}
-                className="w-full py-3 rounded-md bg-blue-600 text-white text-sm font-medium shadow hover:bg-blue-700 transition-all"
-              >
-                Schedule a Tour
-              </button>
-            </div>
           </motion.div>
         </>
       )}
