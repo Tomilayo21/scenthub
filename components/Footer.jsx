@@ -367,7 +367,9 @@ export default function Footer() {
                                     },
                                     {
                                         icon: FaWhatsapp,
-                                        link: "https://wa.me/2348100515622",
+                                        link: `https://wa.me/2348178657674?text=${encodeURIComponent(
+                                            "Hi, I'm reaching out to learn more about your projects and services."
+                                        )}`
                                     },
                                 ].map(({ icon: Icon, link }, index) => (
 
