@@ -60,7 +60,7 @@ export default function Footer() {
                         <div className="grid grid-cols-2 gap-6 mt-10 md:mt-16">
 
                             {/* Company */}
-                            <div className="justify-self-end pr-8">
+                            <div className="justify-self-end pr-4">
 
                                 <h3 className="uppercase tracking-[3px] text-sm font-semibold mb-5">
                                     Company
@@ -308,7 +308,7 @@ export default function Footer() {
                         px-6
                         md:px-12
                         lg:px-16
-                        py-2
+                        py-4
                         flex
                         items-center
                         justify-between
