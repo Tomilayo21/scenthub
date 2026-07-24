@@ -14,14 +14,33 @@ export default function MobileMenuDrawer({ isOpen, onClose }) {
   const user = session?.user;
 
   useEffect(() => {
+    const scrollY = window.scrollY;
+
     if (isOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.width = "100%";
     } else {
-      document.body.style.overflow = "unset";
+      const top = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
+
+      if (top) {
+        window.scrollTo(0, parseInt(top || "0") * -1);
+      }
     }
 
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
     };
   }, [isOpen]);
 
@@ -69,11 +88,11 @@ export default function MobileMenuDrawer({ isOpen, onClose }) {
           >
 
             {/* HEADER */}
-            <div className="flex items-center justify-between px-8 pt-8">
+            <div className="flex items-center justify-between px-8 pt-8 mt-4">
 
               <div>
 
-                  <p className="text-white/50 uppercase tracking-[4px] text-xs">
+                  <p className="text-white uppercase tracking-[4px] text-xs">
                     Navigations
                   </p>
 
@@ -97,7 +116,7 @@ export default function MobileMenuDrawer({ isOpen, onClose }) {
                   items-center
                   justify-center
                   transition
-                  mt-4
+                  cursor-pointer
                   "
               >
                   <X className="text-white" />
