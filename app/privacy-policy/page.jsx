@@ -8,12 +8,12 @@ export default function PrivacyPolicy() {
         <>
             <Navbar />
 
-            <main className="pt-32 pb-24 bg-white">
-                <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 py-4 md:py-6">
+            <main className="pb-24 bg-white">
+                <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 py-4">
 
                     {/* Header */}
                     <div className="mb-20 text-center">
-                        <h1 className="mt-4 text-4xl md:text-6xl font-bold text-gray-900">
+                        <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
                             Privacy Policy
                         </h1>
 
