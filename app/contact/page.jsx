@@ -9,16 +9,13 @@ export default function Contact() {
         <>
             <Navbar />
 
-            <main className="bg-white text-black pt-8">
+            <main className="bg-white text-black">
 
 
                 {/* CONTACT AREA */}
                 <section className="
                     px-6
                     md:px-12
-                    py-24
-                    mt-8
-                    md:py-36
                 ">
 
 
