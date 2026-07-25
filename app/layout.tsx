@@ -110,7 +110,7 @@ export const metadata: Metadata = {
     "Scenthub Realty & Construction Limited provides professional construction, renovation, project management, and real estate services in Nigeria.",
 
   icons: {
-    icon: "/logo/1001366707-removebg-preview.png",
+    icon: "/icon.png",
   },
 };
 
