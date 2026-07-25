@@ -8,8 +8,8 @@ export default function TermsAndConditions() {
         <>
             <Navbar />
 
-            <main className="pt-32 pb-24 bg-white mt-16">
-                <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 py-4 md:py-6">
+            <main className="pb-24 mt-20 bg-white">
+                <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 py-6">
 
                     {/* Header */}
                     <div className="mb-20 text-center">
