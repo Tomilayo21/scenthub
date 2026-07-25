@@ -1,9 +1,14 @@
-"use client";
 
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata = {
+  title: "About",
+  description:
+    "Scenthub Realty & Construction Limited delivers premium construction, renovation, and real estate solutions in Nigeria.",
+};
 
 
 const values = [

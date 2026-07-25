@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Herosection from "@/components/Herosection";
@@ -7,6 +9,12 @@ import Count from "@/components/Count";
 import ClientsStory from "@/components/ClientsStory";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Scenthub Realty & Construction Limited delivers premium construction, renovation, and real estate solutions in Nigeria.",
+};
 
 export default function Home() {
   return (

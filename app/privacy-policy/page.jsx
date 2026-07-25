@@ -1,7 +1,11 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata = {
+  title: "Privacy Policy",
+  description:
+    "Scenthub Realty & Construction Limited delivers premium construction, renovation, and real estate solutions in Nigeria.",
+};
 
 export default function PrivacyPolicy() {
     return (
