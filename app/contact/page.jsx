@@ -16,7 +16,7 @@ export default function Contact() {
                 <section className="
                     px-6
                     md:px-12
-                    py-16
+                    py-6
                 ">
 
 
