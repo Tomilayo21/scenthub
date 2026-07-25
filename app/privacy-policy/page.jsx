@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
         <>
             <Navbar />
 
-            <main className="pb-24 bg-white">
+            <main className="pb-24 mt-20 bg-white">
                 <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 py-4">
 
                     {/* Header */}
