@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AddProject from "@/components/AddProjectPanel";
 
 export const metadata = {
   title: "Terms & Conditions",
@@ -11,9 +12,11 @@ export default function TermsAndConditions() {
     return (
         <>
             <Navbar />
-
             <main className="pb-24 mt-20 bg-white">
                 <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 py-16">
+
+                                {/* <AddProject /> */}
+
 
                     {/* Header */}
                     <div className="mb-20 text-center">

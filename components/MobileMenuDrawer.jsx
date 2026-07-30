@@ -190,14 +190,10 @@ export default function MobileMenuDrawer({ isOpen, onClose }) {
                 </Link>
 
                 {user && user.role === "admin" && (
-                  <>
-
-                    <div className="pt-4 pb-1 text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">My Activity</div>
-                  
-                    <Link href="/admin" onClick={onClose} className="flex justify-center gap-3 py-3 border-b border-gray-200 dark:border-gray-800 hover:text-norms font-normal">
+                  <>      
+                    <Link href="/admin" onClick={onClose} className="flex justify-center gap-3 py-3 border-gray-200 dark:border-gray-800 hover:text-norms font-normal">
                       Admin Dashboard
                     </Link>
-
                   </>
 
                 )}
