@@ -251,6 +251,7 @@ export default function AboutSection() {
                 src="/mostafa-meraji-AQ4Xy9O51J4-unsplash.jpg"
                 alt="Construction team"
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
             />
             </div>
